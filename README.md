@@ -3,7 +3,7 @@
 ## ⚙️ Installation
 
 ```bash
-git clone git@github.com:{ton-pseudo}/Checkpoint_140425.git
+git clone git@github.com:L0Bot/Checkpoint_140425.git
 cd Checkpoint_140425
 npm install
 ```
@@ -32,7 +32,7 @@ npm run seed
 > Enregistre un nouveau pays dans la base (avec code, nom, emoji, continentName, continentCode)
 
 ```graphql
-mutation {
+mutation CreateCountry {
   addCountry(
     data: {
       code: "FR"
@@ -59,7 +59,7 @@ mutation {
 > Renvoie tous les pays, avec `code`, `name` et `emoji`
 
 ```graphql
-query {
+query GetAllCountries {
   getAllCountries {
     code
     name
@@ -73,7 +73,7 @@ query {
 > Prend en paramètre un `code` et renvoie le pays correspondant
 
 ```graphql
-query {
+query GetCountryByCode {
   getCountryByCode(code: "FR") {
     code
     name
@@ -89,7 +89,7 @@ query {
 > Prend en paramètre un `continentCode` et renvoie les pays correspondants
 
 ```graphql
-query {
+query GetCountriesByContinentCode {
   getCountriesByContinentCode(continentCode: "EU") {
     code
     name
