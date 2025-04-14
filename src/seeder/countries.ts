@@ -1,12 +1,5 @@
 export const countries = [
   {
-    code: "FR",
-    name: "France",
-    emoji: "🇫🇷",
-    continentName: "Europe",
-    continentCode: "EU",
-  },
-  {
     code: "BE",
     name: "Belgium",
     emoji: "🇧🇪",
